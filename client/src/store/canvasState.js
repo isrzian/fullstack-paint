@@ -2,13 +2,16 @@ import { makeAutoObservable } from "mobx";
 
 class CanvasState {
 	canvas = null
-
 	undoList = []
-
 	redoList = []
+	username = ""
 
 	constructor() {
 		makeAutoObservable(this)
+	}
+
+	setUsername(username) {
+		this.username = username
 	}
 
 	setCanvas(canvas) {
